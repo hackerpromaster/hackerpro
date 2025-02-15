@@ -2,89 +2,150 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Arial', sans-serif; /* Красивый шрифт */
-    background: linear-gradient(135deg, #6a11cb, #2575fc); /* Градиентный фон */
-    color: #ffffff; /* Белый текст */
-    height: 100vh; /* Высота body равна высоте экрана */
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: white;
     display: flex;
     justify-content: center;
     align-items: center;
+    min-height: 100vh;
     text-align: center;
 }
 
 /* Контейнер */
 .container {
-    max-width: 600px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
     padding: 20px;
-    background: rgba(255, 255, 255, 0.1); /* Полупрозрачный белый фон */
-    border-radius: 15px; /* Закруглённые углы */
-    backdrop-filter: blur(10px); /* Размытие фона */
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2); /* Тень */
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
 }
 
 /* Заголовок */
 h1 {
     font-size: 2.5em;
-    margin-bottom: 10px;
-}
-
-/* Текст */
-p {
-    font-size: 1.2em;
     margin-bottom: 20px;
 }
 
-/* Счётчик */
-#counter {
-    font-size: 3em;
-    font-weight: bold;
-    margin-bottom: 20px;
-    color: #ff6f61; /* Коралловый цвет */
+/* Картинка с анимацией */
+.clickable-image {
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
 }
 
-/* Кнопка */
-#clickButton {
-    background-color: #ff6f61; /* Коралловый цвет */
+.clickable-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Ссылка для возврата */
+a {
     color: white;
-    padding: 15px 30px;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #ff6f61;
+}
+
+/* Анимация для кнопки */
+button {
+    background: #ff6f61;
+    color: white;
     border: none;
-    border-radius: 25px; /* Закруглённые углы */
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #ff4a3d;
+}
+
+/* Общие стили */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+}
+
+/* Контейнер */
+.container {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 30px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    width: 100%;
+}
+
+/* Изображение товара */
+.product-image {
+    border-radius: 15px;
+    width: 100%;
+    max-width: 400px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Заголовок */
+h1 {
+    font-size: 2.5em;
+    margin: 20px 0;
+}
+
+/* Описание товара */
+.description {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin: 20px 0;
+}
+
+/* Цена */
+.price {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+.price span {
+    color: #ff6f61; /* Коралловый цвет для цены */
+}
+
+/* Кнопка "Купить" */
+button {
+    background: #ff6f61;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 25px;
     font-size: 1.2em;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease; /* Плавные анимации */
+    transition: background 0.3s ease, transform 0.3s ease;
 }
 
-/* Анимация при наведении на кнопку */
-#clickButton:hover {
-    background-color: #ff4a3d; /* Темнее коралловый */
-    transform: scale(1.05); /* Увеличение кнопки */
+button:hover {
+    background: #ff4a3d; /* Темнее коралловый */
+    transform: scale(1.05);
 }
 
-/* Анимация при нажатии на кнопку */
-#clickButton:active {
-    background-color: #ff2e1f; /* Ещё темнее коралловый */
-    transform: scale(0.95); /* Уменьшение кнопки */
-}
-
-/* Секретное изображение */
-#secretImage {
-    margin-top: 20px;
-    border-radius: 10px; /* Закруглённые углы */
-    display: none; /* Скрыто по умолчанию */
-}
-
-/* Класс для отображения изображения */
-#secretImage.visible {
-    display: block; /* Показываем изображение */
-}
-/* Стили для отключённой кнопки */
-#clickButton:disabled {
-    background-color: #cccccc; /* Серый цвет */
-    cursor: not-allowed; /* Курсор "недоступно" */
-    opacity: 0.5; /* Полупрозрачность */
-}
-
-.image {
-    display: block;
-    margin: auto;
+button:active {
+    background: #ff2e1f; /* Ещё темнее коралловый */
+    transform: scale(0.95);
 }
