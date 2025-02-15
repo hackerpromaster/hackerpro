@@ -34,8 +34,16 @@ p {
     margin-bottom: 20px;
 }
 
+/* Счётчик */
+#counter {
+    font-size: 3em;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #ff6f61; /* Коралловый цвет */
+}
+
 /* Кнопка */
-.center-button {
+#clickButton {
     background-color: #ff6f61; /* Коралловый цвет */
     color: white;
     padding: 15px 30px;
@@ -47,13 +55,13 @@ p {
 }
 
 /* Анимация при наведении на кнопку */
-.center-button:hover {
-    background-color: #ff4a3d; /* Темнее коралловый */
+#clickButton:hover {
+    background-color: #33da1d; /* Темнее коралловый */
     transform: scale(1.05); /* Увеличение кнопки */
 }
 
 /* Анимация при нажатии на кнопку */
-.center-button:active {
+#clickButton:active {
     background-color: #ff2e1f; /* Ещё темнее коралловый */
     transform: scale(0.95); /* Уменьшение кнопки */
 }
