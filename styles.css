@@ -83,3 +83,8 @@ p {
     cursor: not-allowed; /* Курсор "недоступно" */
     opacity: 0.5; /* Полупрозрачность */
 }
+
+.image {
+    display: block;
+    margin: auto;
+}
