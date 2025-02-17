@@ -16,9 +16,11 @@ body {
 .container {
     background: rgba(255, 255, 255, 0.1);
     border-radius: 15px;
-    padding: 20px;
+    padding: 30px;
     backdrop-filter: blur(10px);
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    max-width: 500px;
+    width: 100%;
 }
 
 /* Заголовок */
@@ -27,125 +29,30 @@ h1 {
     margin-bottom: 20px;
 }
 
-/* Картинка с анимацией */
-.clickable-image {
-    border-radius: 15px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer;
-}
-
-.clickable-image:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-}
-
-/* Ссылка для возврата */
-a {
-    color: white;
-    text-decoration: none;
+/* Текст */
+p {
     font-size: 1.2em;
-    transition: color 0.3s ease;
+    margin-bottom: 30px;
 }
 
-a:hover {
-    color: #ff6f61;
-}
-
-/* Анимация для кнопки */
-button {
+/* Кнопка */
+.button {
+    display: inline-block;
     background: #ff6f61;
     color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.3s ease;
-}
-
-button:hover {
-    background: #ff4a3d;
-}
-
-/* Общие стили */
-body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Arial', sans-serif;
-    background: linear-gradient(135deg, #6a11cb, #2575fc);
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    text-align: center;
-}
-
-/* Контейнер */
-.container {
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 15px;
-    padding: 30px;
-    backdrop-filter: blur(10px);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-    max-width: 600px;
-    width: 100%;
-}
-
-/* Изображение товара */
-.product-image {
-    border-radius: 15px;
-    width: 100%;
-    max-width: 400px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.product-image:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-}
-
-/* Заголовок */
-h1 {
-    font-size: 2.5em;
-    margin: 20px 0;
-}
-
-/* Описание товара */
-.description {
-    font-size: 1.2em;
-    line-height: 1.6;
-    margin: 20px 0;
-}
-
-/* Цена */
-.price {
-    font-size: 1.5em;
-    font-weight: bold;
-    margin: 20px 0;
-}
-
-.price span {
-    color: #ff6f61; /* Коралловый цвет для цены */
-}
-
-/* Кнопка "Купить" */
-button {
-    background: #ff6f61;
-    color: white;
-    border: none;
     padding: 15px 30px;
     border-radius: 25px;
+    text-decoration: none;
     font-size: 1.2em;
-    cursor: pointer;
     transition: background 0.3s ease, transform 0.3s ease;
 }
 
-button:hover {
-    background: #ff4a3d; /* Темнее коралловый */
+.button:hover {
+    background: #ff4a3d;
     transform: scale(1.05);
 }
 
-button:active {
-    background: #ff2e1f; /* Ещё темнее коралловый */
+.button:active {
+    background: #ff2e1f;
     transform: scale(0.95);
 }
